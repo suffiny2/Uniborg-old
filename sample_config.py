@@ -99,3 +99,4 @@ class Production(Config):
 
 class Development(Config):
     LOGGER = True
+GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
