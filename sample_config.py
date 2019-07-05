@@ -99,4 +99,5 @@ class Production(Config):
 
 class Development(Config):
     LOGGER = True
+GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
