@@ -75,8 +75,8 @@ class Config(object):
     NC_LOG_P_M_S = bool(os.environ.get("NC_LOG_P_M_S", False))
     # send .get_id in any channel to forward all your NEW PMs to this group
     PM_LOGGR_BOT_API_ID = int(os.environ.get("PM_LOGGR_BOT_API_ID", "-100"))
-    # For Databases
-    # can be None in which case plugins requiring
+    GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
+    GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
     # DataBase would not work
     DB_URI = os.environ.get("DATABASE_URL", None)
     # number of rows of buttons to be displayed in .helpme command
@@ -99,5 +99,4 @@ class Production(Config):
 
 class Development(Config):
     LOGGER = True
-GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
-GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
+
