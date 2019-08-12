@@ -1,5 +1,6 @@
 aiofiles
 aiohttp
+aria2p
 beautifulsoup4
 cfscrape
 cryptg
@@ -11,10 +12,13 @@ gtts
 hachoir
 Pillow
 psycopg2
+pySmartDL
+python-barcode
 python-magic
 qrcode
 regex
 requests
+selenium
 speedtest-cli
 sqlalchemy
 telegraph
