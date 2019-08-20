@@ -54,7 +54,7 @@ async def _(event):
     if is_a_s:
         file_ext_ns_ion = "AnimatedSticker.tgs"
         uploaded_sticker = await borg.upload_file(file, file_name=file_ext_ns_ion)
-        packname = f"@Param AnimatedStickers"
+        packname = f"Param's AnimatedStickers"
         packshortname = f"canbeanywhere_animatedPack"  # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
         await event.edit("Invalid message type")
@@ -65,7 +65,7 @@ async def _(event):
             sticker.seek(0)
             uploaded_sticker = await borg.upload_file(sticker, file_name=file_ext_ns_ion)
 
-    await event.edit("Grabbing Sketch Brush & Painting this Picture")
+    await event.edit("In process, Please wait")
 
     async with borg.conversation("@Stickers") as bot_conv:
         now = datetime.datetime.now()
