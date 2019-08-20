@@ -29,7 +29,7 @@ from telethon.tl.types import (
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd("kangsticker ?(.*)"))
+@borg.on(admin_cmd("kang ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -44,18 +44,18 @@ async def _(event):
 
     me = borg.me
     userid = event.from_id
-    packname = f"@loxxi Pack"
-    packshortname = f"loxxi_packs"  # format: Uni_Borg_userid
+    packname = f"Param's Pack"
+    packshortname = f"@canbeanywhere_packs"  # format: Uni_Borg_userid
 
     is_a_s = is_it_animated_sticker(reply_message)
-    file_ext_ns_ion = "@loxxi_Sticker.png"
+    file_ext_ns_ion = "@canbeanywhere_Sticker.png"
     file = await borg.download_file(reply_message.media)
     uploaded_sticker = None
     if is_a_s:
         file_ext_ns_ion = "AnimatedSticker.tgs"
         uploaded_sticker = await borg.upload_file(file, file_name=file_ext_ns_ion)
-        packname = f"@loxxi AnimatedStickers"
-        packshortname = f"loxxi_animatedPack"  # format: Uni_Borg_userid
+        packname = f"@Param AnimatedStickers"
+        packshortname = f"canbeanywhere_animatedPack"  # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
         await event.edit("Invalid message type")
         return
@@ -117,7 +117,7 @@ async def _(event):
             await silently_send_message(bot_conv, sticker_emoji)
             await silently_send_message(bot_conv, "/done")
 
-    await event.edit(f"Painting Done! Find Your Masterpiece [here](t.me/addstickers/{packshortname})")
+    await event.edit(f"Done! it's [here](t.me/addstickers/{packshortname})")
 
 
 @borg.on(admin_cmd("packinfo"))
